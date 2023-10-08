@@ -1,6 +1,9 @@
 # node-sweat
 REST API to create and fetch workout sessions
 
+[![CI/CD Status](https://github.com/daru23/node-sweat/actions/workflows/github-ci.yml/badge.svg)](https://github.com/daru23/node-sweat/actions)
+
+
 # Dependencies
 - Docker Engine ([see](https://www.docker.com/get-started/))
 - docker-compose ([see](https://docs.docker.com/compose/gettingstarted/))
