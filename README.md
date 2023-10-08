@@ -39,6 +39,14 @@ or
 docker volume rm mongodb_data
 ```
 
+# How to generate a JWT
+
+```shell
+docker exec -it node-sweat bash -c "bash generate-jwt.sh {replace-with-user-id}"
+```
+
+At the moment userId is not being checked against the database, so you can use any integer.
+
 ## API Documentation
 To access the api documentation go to:
 
