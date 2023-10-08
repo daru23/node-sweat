@@ -5,7 +5,11 @@ require('dotenv').config();
 
 module.exports = {
     generateToKen: (userId) => {
-        const token = Jwt.sign({ userId: userId }, process.env.JWT_SECRET, { expiresIn: process.env.TOKEN_EXPIRATION_HOURS });
-        return { token };
+        if (!userId) {
+            return;
+        }
+
+        const token = Jwt.sign({userId: userId}, process.env.JWT_SECRET, {expiresIn: process.env.TOKEN_EXPIRATION_HOURS});
+        return {token};
     }
 }
