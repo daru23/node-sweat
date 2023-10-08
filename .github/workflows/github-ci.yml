@@ -19,6 +19,10 @@ jobs:
         node-version: [14.x, 16.x, 18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
+    env:
+      JWT_SECRET: your-secret-key
+      TOKEN_EXPIRATION_HOURS: 1h
+
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
