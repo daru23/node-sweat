@@ -37,8 +37,8 @@ module.exports = [
         },
         config: {
             auth: 'jwt', // Require JWT authentication
-            tags: ['api', 'workout', 'session', 'userId'],
-            description: 'Fetch workout session for a user by giving a userId.',
+            tags: ['api', 'workout', 'session', 'id'],
+            description: 'Fetch workout session.',
             response: {
                 schema: workoutSessionValidator.label('WorkoutSession'),
             },
@@ -65,7 +65,7 @@ module.exports = [
                 // Save the new workout to the database
                 const savedWorkoutSession = await newWorkoutSession.save();
 
-                // Transforming objectId to String to be able to validate it using Joi Schema
+                // toObject() to be able to validate response
                 const workoutSession = savedWorkoutSession.toObject();
 
                 return h.response(workoutSession).code(201);
@@ -76,8 +76,8 @@ module.exports = [
         },
         config: {
             auth: 'jwt', // Require JWT authentication
-            tags: ['api', 'workout', 'session', 'userId'],
-            description: 'Create a workout session for a user.',
+            tags: ['api', 'workout', 'session', 'id'],
+            description: 'Create a workout session.',
             response: {
                 schema: workoutSessionValidator.label('WorkoutSession'),
             },
