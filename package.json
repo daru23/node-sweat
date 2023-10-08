@@ -1,0 +1,28 @@
+{
+  "name": "node-sweat",
+  "version": "0.0.1",
+  "description": "REST API to create and get workout sessions",
+  "main": "index.js",
+  "scripts": {
+    "start": "node -r dotenv/config index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "@hapi/bell": "^13.0.1",
+    "@hapi/hapi": "^20.3.0",
+    "@hapi/inert": "^7.1.0",
+    "@hapi/vision": "^7.0.3",
+    "dotenv": "^16.3.1",
+    "glob": "^10.3.10",
+    "handlebars": "^4.7.8",
+    "hapi-auth-cookie": "^10.0.0",
+    "hapi-auth-jwt2": "^10.4.0",
+    "hapi-swagger": "^17.1.0",
+    "joi": "^17.11.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.12"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
